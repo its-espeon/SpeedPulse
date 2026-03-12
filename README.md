@@ -83,6 +83,7 @@ In production environments, this would require:
 
 ## ▶️ How to Run
 Copy paste the url on browser https://speed-pulse-phi.vercel.app/
+
 **OR**
 1. Clone the repository
 ```bash
