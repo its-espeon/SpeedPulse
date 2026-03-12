@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpeedPulse - Internet Speed & IP Tester</title>
+  <meta name="description" content="Measure your internet connection speed (download, upload, ping) and view your public IP address.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  
+  <div class="container">
+    <header class="header">
+      <h1>SpeedPulse</h1>
+      <p class="subtitle">Next-gen connection diagnostics</p>
+    </header>
+
+    <div class="glass-card ip-section">
+      <div class="ip-info">
+        <span class="label">Your IP Address</span>
+        <h2 id="ip-display" class="value">Detecting...</h2>
+        <p id="isp-display" class="isp-info">Fetching details...</p>
+      </div>
+      <div class="ip-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+      </div>
+    </div>
+
+    <div class="glass-card test-section">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon ping">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          </div>
+          <div class="stat-content">
+            <span class="label">Ping</span>
+            <div class="value-wrapper">
+              <span id="ping-value" class="value">--</span>
+              <span class="unit">ms</span>
+            </div>
+            <div class="progress-bar-container"><div id="ping-progress" class="progress-bar"></div></div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon download">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          </div>
+          <div class="stat-content">
+            <span class="label">Download</span>
+            <div class="value-wrapper">
+              <span id="download-value" class="value highlight">--</span>
+              <span class="unit">Mbps</span>
+            </div>
+            <div class="progress-bar-container"><div id="download-progress" class="progress-bar"></div></div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon upload">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+          </div>
+          <div class="stat-content">
+            <span class="label">Upload</span>
+            <div class="value-wrapper">
+              <span id="upload-value" class="value">--</span>
+              <span class="unit">Mbps</span>
+            </div>
+            <div class="progress-bar-container"><div id="upload-progress" class="progress-bar"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="action-area">
+        <button id="start-btn" class="primary-btn">
+          <span class="btn-text">Start Test</span>
+          <span class="btn-loader"></span>
+        </button>
+      </div>
+    </div>
+    
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
