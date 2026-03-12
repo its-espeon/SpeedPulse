@@ -2,14 +2,16 @@
   --bg-color: #0f172a;
   --text-main: #f8fafc;
   --text-muted: #94a3b8;
-  
+
   --primary: #3b82f6;
   --primary-glow: rgba(59, 130, 246, 0.4);
-  --accent-1: #06b6d4; /* Cyan */
-  --accent-2: #8b5cf6; /* Purple */
+  --accent-1: #06b6d4;
+  /* Cyan */
+  --accent-2: #8b5cf6;
+  /* Purple */
   --success: #10b981;
   --warning: #f59e0b;
-  
+
   --glass-bg: rgba(30, 41, 59, 0.4);
   --glass-border: rgba(255, 255, 255, 0.08);
   --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
@@ -62,10 +64,21 @@ body {
 }
 
 @keyframes float {
-  0% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(50px, -50px) scale(1.1); }
-  66% { transform: translate(-30px, 30px) scale(0.9); }
-  100% { transform: translate(0, 0) scale(1); }
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(50px, -50px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-30px, 30px) scale(0.9);
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
 }
 
 .container {
@@ -85,6 +98,7 @@ body {
   font-weight: 700;
   background: linear-gradient(135deg, #fff 0%, var(--text-muted) 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: -1px;
 }
@@ -142,6 +156,7 @@ body {
 .value.highlight {
   background: linear-gradient(135deg, var(--accent-1) 0%, var(--primary) 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -193,9 +208,17 @@ body {
   background: rgba(255, 255, 255, 0.05);
 }
 
-.stat-icon.ping { color: var(--warning); }
-.stat-icon.download { color: var(--accent-1); }
-.stat-icon.upload { color: var(--accent-2); }
+.stat-icon.ping {
+  color: var(--warning);
+}
+
+.stat-icon.download {
+  color: var(--accent-1);
+}
+
+.stat-icon.upload {
+  color: var(--accent-2);
+}
 
 .stat-content {
   width: 100%;
@@ -234,9 +257,17 @@ body {
   transition: width 0.3s ease-out;
 }
 
-#ping-progress { background: var(--warning); }
-#download-progress { background: linear-gradient(90deg, var(--accent-1), var(--primary)); }
-#upload-progress { background: linear-gradient(90deg, var(--accent-2), #d946ef); }
+#ping-progress {
+  background: var(--warning);
+}
+
+#download-progress {
+  background: linear-gradient(90deg, var(--accent-1), var(--primary));
+}
+
+#upload-progress {
+  background: linear-gradient(90deg, var(--accent-2), #d946ef);
+}
 
 /* Buttons */
 .action-area {
@@ -299,7 +330,9 @@ body {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Status Animations */
@@ -308,9 +341,17 @@ body {
 }
 
 @keyframes scale-pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* Responsiveness */
@@ -319,21 +360,21 @@ body {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-  
+
   .header h1 {
     font-size: 2.2rem;
   }
-  
+
   .ip-section {
     flex-direction: column;
     text-align: center;
     gap: 1.5rem;
   }
-  
+
   .ip-section .label {
     margin-bottom: 0.5rem;
   }
-  
+
   .ip-icon {
     order: -1;
   }
