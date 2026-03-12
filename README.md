@@ -82,6 +82,8 @@ In production environments, this would require:
 * WebRTC data channels
 
 ## ▶️ How to Run
+Copy paste the url on browser https://speed-pulse-phi.vercel.app/
+**OR**
 1. Clone the repository
 ```bash
 git clone https://github.com/yourusername/internet-speed-test.git
